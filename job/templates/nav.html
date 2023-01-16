@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg ">
+      
+        <div class="container-fluid">
+          
+          <a class="navbar-brand" href="#"></a>
+          
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" style="color: white;"href="{% url 'home'%}"><i class="fas fa-home"></i>&nbsp;Home</a>
+              </li>
+      
+              <li class="nav-item navbar-nav mr-4 ">
+                <a class="nav-link  btn btn-outline-danger" href="{% url 'register'%}">REGISTER</a>
+              </li>
+              <br>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  LOGIN
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="nav-link active " href="{% url 'login'%}">HEAD LOGIN</a>
+                  <a class="nav-link active " href="{% url 'userlogin'%}">USER LOGIN</a>
+                  
+                  <div class="dropdown-divider"></div>
+
+                </div>
+              
+              </li>
+              <li class="nav-item navbar-nav mr-4 ">
+                <a class="nav-link  btn btn-outline-danger" href="{% url 'adlogin'%}">admin</a>
+              </li>
+              
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+            {% block content%}
+            {% endblock content%}
+
+    
+</body>
+</html>
